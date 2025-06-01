@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #f4f5f8;
+    color: #000000;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.search-bar{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#searchInput{
+    padding: 0.6rem;
+    padding-left: 20px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow:
+    inset -10px -10px 10px rgb(255, 255, 255),
+    inset 10px 10px 10px rgba(174, 174, 192, 0.229);
+    font-size: 1rem;
+    height: 6vh;
+    border-radius: 999px 0 0 999px;
+    border: none;
+    outline: none;
+    width: 60%;
+    max-width: 300px;
+}
+
+button{
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    background: #ffffff;
+    box-shadow:
+    inset -10px -10px 10px rgb(255, 255, 255),
+    inset 10px 10px 10px rgba(174, 174, 192, 0.212);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 0 999px 999px 0;
+    cursor: pointer;
+}
+
+/* #searchInput {
+    padding: 0.6rem;
+    padding-left: 20px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow:
+    inset -10px -10px 10px rgb(255, 255, 255),
+    inset 10px 10px 10px rgba(174, 174, 192, 0.229);
+    font-size: 1rem;
+    height: 6vh;
+    border-radius: 999px;
+    border: none;
+    outline: none;
+    width: 60%;
+    max-width: 300px;
+    flex: space-around;
+}
+
+button {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    background: #ffffff;
+    box-shadow:
+    inset -10px -10px 10px rgb(255, 255, 255),
+    inset 10px 10px 10px rgba(174, 174, 192, 0.212);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 0 999px 999px 0;
+    cursor: pointer;
+} */
+
+#results {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 27vh;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.card p {
+    margin: 0.5rem 0 0.3rem;
+    cursor: default;
+}
+
+.songTitle{
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: default;
+    text-transform: capitalize; /* hoofdletter bij eerste woord.. */
+}
+
+audio {
+    width: 100%;
+    margin-top: 0.5rem;;
+    flex: flex-end;
+}
+
+#loading {
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+.artist:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #1db954;
+    transition: 0.2s ease-in-out;
+}
