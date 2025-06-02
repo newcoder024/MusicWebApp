@@ -17,7 +17,7 @@ h1 {
     margin-bottom: 1rem;
 }
 
-header{
+nav{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,19 +26,30 @@ header{
     gap: 1rem;
 }
 
-.search-bar{
-    width: 100%;
-    position: relative;
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+}
+
+.search-bar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 #searchInput{
     padding: 0.6rem;
     padding-left: 20px;
     background: #ffffff;
-    border-radius: 50%;
     box-shadow:
     inset -10px -10px 10px rgb(255, 255, 255),
     inset 10px 10px 10px rgba(174, 174, 192, 0.229);
@@ -49,6 +60,8 @@ header{
     outline: none;
     width: 60%;
     max-width: 300px;
+    min-width: 250px;
+    backdrop-filter: blur(5px);
 }
 
 button{

@@ -1,3 +1,29 @@
+// // data voor home slideshow met artiesten en info..
+// const artists = ['The Weeknd', 'SZA', 'Billie Eilish', 'Doechii', 'Tyler the Creator']
+// const slideContainer = document.querySelector('.slide-show');
+
+// // Maak de slides voor de artiesten..
+// artists.forEach(artist => {
+//     fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(artist)}&media=music&entity=musicTrack&limit=1`)
+//     .then(response => response.json())
+//     .then(data => {
+//         const song = data.results[0];
+//         if (song){
+//             const slide = document.createElement('div');
+//             slide.className = 'artist-slide';
+//             slide.innerHTML = `
+//             <img src="${song.artworkUrl100.replace('100x100', '400x400')}" alt="${song.trackName}">
+//             <div class="artist-info">
+//                 <h2>${song.trackName}</h2>
+//                 <p>Artist: ${song.artistName}</p>
+//                 <p>Album: ${song.collectionName}</p>
+//             </div>
+//             `;
+//             slideContainer.appendChild(slide);
+//         }
+//     })
+// })
+
 function searchMusic(){
     const input = document.getElementById('searchInput').value;
     const results = document.getElementById('results');
